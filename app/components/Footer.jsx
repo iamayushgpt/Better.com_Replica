@@ -122,7 +122,7 @@ const Footer = () => {
             <h4 class="font-bold text-textPrimary leading-heading m-0 p-0 tracking-normal w-auto text-base md:text-lg">
               Resources
             </h4>
-            <ul class="mt-2 space-y-4 md:mt-6">
+            <ul class="mt-2 font-thin space-y-4 md:mt-6">
               <li>
                 <a
                   href="/how-much-house-can-i-afford"
@@ -217,7 +217,7 @@ const Footer = () => {
             <h4 class="font-bold text-textPrimary leading-heading m-0 p-0 tracking-normal w-auto text-base md:text-lg">
               Company
             </h4>
-            <ul class="mt-2 space-y-4 md:mt-6">
+            <ul class="mt-2 space-y-4 font-thin md:mt-6">
               <li>
                 <a
                   class="hover-gradient-effect block py-1 text-link styles_hover-gradient-effect__AIX_8"
@@ -280,7 +280,7 @@ const Footer = () => {
             <h4 class="font-bold text-textPrimary leading-heading m-0 p-0 tracking-normal w-auto text-base md:text-lg">
               Contact Us
             </h4>
-            <ul class="mt-2 space-y-4 md:mt-6">
+            <ul class="mt-2 font-thin space-y-4 md:mt-6">
               <li>
                 <a
                   class="styles_hover-gradient-effect__AIX_8"
@@ -317,7 +317,7 @@ const Footer = () => {
             <h4 class="font-bold text-textPrimary leading-heading m-0 p-0 tracking-normal w-auto text-base md:text-lg mt-6">
               Legal
             </h4>
-            <ul class="mt-2 space-y-4 md:mt-6">
+            <ul class="mt-2 font-thin space-y-4 md:mt-6">
               <li>
                 <a
                   class="styles_hover-gradient-effect__AIX_8"
@@ -487,7 +487,7 @@ const Footer = () => {
           </div>
         </div>
         <div class="mt-12">
-          <p class="font-normal leading-body m-0 p-0 text-left text-textPrimary text-xs">
+          <p class="font-thin leading-body m-0 p-0 text-left text-textPrimary text-xs">
             <sup>1</sup> Better Mortgage’s One Day Mortgage™ promotion offers
             qualified customers who provide certain required financial
             information/documentation to Better Mortgage within 4 hours of
