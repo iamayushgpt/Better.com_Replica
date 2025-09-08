@@ -1,12 +1,45 @@
-import React from "react";
+"use client"
 
-const Header = () => {
+import React, { useEffect, useRef, useState } from "react";
+const Header = ({headerBgWhite, mortgagePageColor, closePopup}) => {
+
+  const [scrolled, setScrolled] = useState(false);
+  
+
+  useEffect(() => {
+    const sectionHero = document.querySelector(".section-hero");
+
+    if (!sectionHero) return;
+
+    const handleScroll = () => {
+      const tenVh = (10 * window.innerHeight) / 100; // Convert 10vh to pixels
+      const heroBottom = sectionHero.getBoundingClientRect().bottom;
+
+      // When the bottom of section-hero is less than or equal to 10vh, set scrolled to true
+      if (heroBottom <= tenVh) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check in case the user reloads mid-scroll
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    console.log(scrolled);
+  }, [scrolled])
+
+  
   return (
-    <header className="sticky top-0 z-20  transition-all ease-in-out duration-300 ">
-      <nav className="m-auto text-white flex bg-primary w-full items-center justify-between p-5 md:py-5 md:px-10 xl:px-16 xl:py-6">
+    <header  className={`header sticky top-0 z-20  transition-all ease-in-out duration-300 `}>
+      <nav className={`m-auto text-white flex ${closePopup?"bg-white":mortgagePageColor} ${scrolled || headerBgWhite?" bg-white":" bg-primary"} w-full items-center justify-between p-5 md:py-5 md:px-10 xl:px-16 xl:py-6`}>
         <div className="flex gap-12">
-          <h1 className="text-[1.6rem] font-bold">Better</h1>
-          <ul className="hidden xl:flex font-medium  text-[17px] space-x-20 items-center">
+          <h1 className={` ${scrolled || headerBgWhite?"text-black":"text-white"} text-[1.6rem] font-bold`}>Better</h1>
+          <ul className={`hidden xl:flex ${scrolled || headerBgWhite?"text-black":"text-white"}  font-medium  text-[17px] space-x-20 items-center`}>
             <li>Buy </li>
             <li>Refinance </li>
             <li>HELOC </li>
@@ -34,9 +67,9 @@ const Header = () => {
                   ></path>
                 </svg>
               </div>
-              <div className="absolute invisible left-1 min-[520px]:left-auto right-0 pt-2 group-hover:visible">
-                <div className=" bg-backgroundTertiary px-10 py-7 rounded-base w-80 shadow-md">
-                  Call us anytime at{" "}
+              <div className="absolute font-medium whitespace-nowrap  invisible left-1 min-[520px]:left-auto right-0 pt-2 group-hover:visible">
+                <div className=" bg-white text-black px-10 py-7 rounded-lg w-80 shadow-md">
+                  Call us anytime at&nbsp;
                   <a
                     className="underline hover:text-textHighlight"
                     href="tel:4155238837"
@@ -47,16 +80,16 @@ const Header = () => {
               </div>
             </div>
           </li>
-          <li className="md:block hidden">Sign in</li>
+          <li className={` ${scrolled || headerBgWhite?"text-black":"text-white"} md:block hidden`}>Sign in</li>
           <li>
-            <button className="text-black text-center text-[15px] md:text-lg transition-all ease-in-out duration-150 font-semibold px-3 py-1 md:px-8 md:py-3 bg-[#1EE07F] rounded-full">
+            <button className={`${!scrolled || headerBgWhite?"text-black bg-[#1EE07F]":"text-white bg-secondary"}  text-center text-[15px] md:text-lg transition-all ease-in-out duration-150 font-semibold px-3 py-1 md:px-8 md:py-3 rounded-full`}>
               Continue
             </button>
           </li>
           <li className="block xl:hidden">
             <button
-              className=" flex items-center font-normal transition-all ease-in-out duration-300 group-hover:bg-backgroundSecondary group-hover:text-textPrimary text-textInversePrimary hover:text-textInversePrimary hover:bg-inherit"
-              aria-label="open mobile nav bar"
+              className={` flex items-center font-normal transition-all ease-in-out duration-300 group-hover:bg-backgroundSecondary ${ headerBgWhite || scrolled?"text-gray-600":"text-white"} group-hover:text-textPrimary text-textInversePrimary hover:text-textInversePrimary hover:bg-inherit"
+              aria-label="open mobile nav bar`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

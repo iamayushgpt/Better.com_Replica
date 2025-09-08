@@ -2,6 +2,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
+</style>
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,11 +25,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased p-0 m-0`}
+        className={`${geistSans.variable} montserrat-new font-thin bg-mainBg ${geistMono.variable} antialiased p-0 m-0`}
       >
-        <Header/>
+        {/* <Header/> */}
         {children}
-        <Footer/>
+        {/* <Footer/> */}
       </body>
     </html>
   );

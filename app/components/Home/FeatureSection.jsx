@@ -30,9 +30,9 @@ const FeatureSection = () => {
                 src={images[ImgIndex]}
               />
             </div>
-            <div className="flex font-semibold  gap-2">
+            <div className="flex  gap-2">
               <button
-                className={`inline-flex items-center justify-center whitespace-nowrap rounded-full text-lg font-bold leading-normal  transition-all ease-in-out duration-200 border border-strokeDivider 
+                className={`inline-flex items-center justify-center whitespace-nowrap rounded-full text-lg  leading-normal  transition-all ease-in-out duration-200 border border-strokeDivider 
                 ${
                   ImgIndex === 0
                     ? " shadow-[0_0_0_4px_inset] shadow-[#017848]  "
@@ -44,7 +44,7 @@ const FeatureSection = () => {
                 Arian
               </button>
               <button
-                className={`inline-flex items-center justify-center whitespace-nowrap rounded-full text-lg font-bold leading-normal disabled:pointer-events-none disabled:opacity-50 transition-all ease-in-out duration-200 border border-strokeDivider 
+                className={`inline-flex items-center justify-center whitespace-nowrap rounded-full text-lg  leading-normal disabled:pointer-events-none disabled:opacity-50 transition-all ease-in-out duration-200 border border-strokeDivider 
                 ${
                   ImgIndex === 1
                     ? " shadow-[0_0_0_4px_inset] shadow-[#017848]  "
@@ -56,7 +56,7 @@ const FeatureSection = () => {
                 Amanda
               </button>
               <button
-                className={`inline-flex items-center justify-center whitespace-nowrap rounded-full text-lg font-bold leading-normal disabled:pointer-events-none disabled:opacity-50 transition-all ease-in-out duration-200 border border-strokeDivider 
+                className={`inline-flex items-center justify-center whitespace-nowrap rounded-full text-lg  leading-normal disabled:pointer-events-none disabled:opacity-50 transition-all ease-in-out duration-200 border border-strokeDivider 
                 ${
                   ImgIndex === 2
                     ? " shadow-[0_0_0_4px_inset] shadow-[#017848]  "
@@ -75,7 +75,7 @@ const FeatureSection = () => {
               Find out why we're better.
             </h2>
             <a
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-bold leading-normal disabled:pointer-events-none disabled:opacity-50 transition-all ease-in-out duration-200 bg-primary text-white hover:bg-secondary h-16 px-12 py-5 mb-sm w-full md:w-fit"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base  leading-normal disabled:pointer-events-none disabled:opacity-50 transition-all ease-in-out duration-200 bg-primary text-white hover:bg-secondary h-16 px-12 py-5 mb-sm w-full md:w-fit"
               href="/about-us/"
             >
               See all our stories
