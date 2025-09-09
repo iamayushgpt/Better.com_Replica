@@ -93,7 +93,9 @@ export default function FAQAccordion() {
                   openIndex === index ? "max-h-40 mt-2" : "max-h-0"
                 }`}
               >
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{faq.answer}</p>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                  {faq.answer}
+                </p>
               </div>
             </div>
           ))}

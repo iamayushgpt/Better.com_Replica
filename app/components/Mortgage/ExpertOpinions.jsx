@@ -54,7 +54,9 @@ export default function ExpertOpinions() {
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">
                   {expert.question}
                 </h3>
-                <p className="text-gray-700 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">{expert.answer}</p>
+                <p className="text-gray-700 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">
+                  {expert.answer}
+                </p>
               </div>
 
               <div className="flex items-center gap-3">
@@ -64,9 +66,15 @@ export default function ExpertOpinions() {
                   className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
                 />
                 <div>
-                  <p className="font-semibold text-gray-900 text-sm sm:text-base">{expert.name}</p>
-                  <p className="text-xs sm:text-sm text-gray-600">{expert.role}</p>
-                  <p className="text-xs sm:text-sm text-gray-500">NMLS {expert.nmls}</p>
+                  <p className="font-semibold text-gray-900 text-sm sm:text-base">
+                    {expert.name}
+                  </p>
+                  <p className="text-xs sm:text-sm text-gray-600">
+                    {expert.role}
+                  </p>
+                  <p className="text-xs sm:text-sm text-gray-500">
+                    NMLS {expert.nmls}
+                  </p>
                 </div>
               </div>
             </div>

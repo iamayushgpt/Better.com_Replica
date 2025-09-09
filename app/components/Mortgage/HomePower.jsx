@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const HomePower = ({quote}) => {
+const HomePower = ({ quote }) => {
   return (
     <div className="flex flex-col items-center border-y-2 justify-center py-24 sm:py-32 lg:py-44 bg-[#fdfcf9] text-center px-4 sm:px-6">
       {/* Heading */}
       <h1 className="text-2xl sm:text-3xl md:text-5xl font-semibold text-gray-900 mb-4 sm:mb-6 leading-tight">
-        {quote?quote:"Check your homebuying power"}
+        {quote ? quote : "Check your homebuying power"}
       </h1>
 
       {/* Button */}
@@ -19,7 +19,7 @@ const HomePower = ({quote}) => {
         no credit impact
       </p>
     </div>
-  )
-}
+  );
+};
 
-export default HomePower
+export default HomePower;

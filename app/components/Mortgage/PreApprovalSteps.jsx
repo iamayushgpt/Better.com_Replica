@@ -5,20 +5,20 @@ const steps = [
     number: "1",
     title: "Share a few details",
     description:
-      "Tell us about your income, credit, and home goals—it takes as little as 3 minutes and won’t affect your credit score."
+      "Tell us about your income, credit, and home goals—it takes as little as 3 minutes and won’t affect your credit score.",
   },
   {
     number: "2",
     title: "See your homebuying budget",
     description:
-      "In minutes, we’ll show you exactly how much you can get pre-approved for—so you know your price range before you shop."
+      "In minutes, we’ll show you exactly how much you can get pre-approved for—so you know your price range before you shop.",
   },
   {
     number: "3",
     title: "Get your pre-approval letter",
     description:
-      "Download your letter instantly and start touring homes with confidence (and a stronger offer in hand)."
-  }
+      "Download your letter instantly and start touring homes with confidence (and a stronger offer in hand).",
+  },
 ];
 
 export default function PreApprovalSteps() {

@@ -4,7 +4,6 @@ export default function CustomerReviews() {
   return (
     <div className="bg-[#fdfcf9] py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-        
         {/* Left Card - Customers Count */}
         <div className="bg-[#9AD5AB] rounded-2xl p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
           <div>
@@ -24,7 +23,9 @@ export default function CustomerReviews() {
         {/* Right Card - Review */}
         <div className="bg-green-50 rounded-2xl p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
           <div>
-            <p className="text-xs sm:text-sm text-gray-600 mb-2 sm:mb-3">05/12/2025</p>
+            <p className="text-xs sm:text-sm text-gray-600 mb-2 sm:mb-3">
+              05/12/2025
+            </p>
             <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-2 sm:mb-3">
               Better offered the best rate
             </h3>
