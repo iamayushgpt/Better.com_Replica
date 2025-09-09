@@ -104,15 +104,15 @@ export default function MortgageCalculator() {
     ((sliderValue - sliderMin) / (sliderMax - sliderMin)) * 100;
 
   return (
-    <div className="bg-[#f0f7f1] min-h-screen py-16">
-      <div className="max-w-screen-2xl mx-auto px-6 md:px-14">
+    <div className="bg-[#f0f7f1] min-h-screen py-8 sm:py-16">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-14">
         <div className="flex flex-col justify-between gap-x-lg">
           <div className="flex-1">
-            <h1 className=" text-[#292b29] leading-tight m-0 p-0 w-auto text-2xl md:text-5xl tracking-tight md:tracking-tighter max-w-[500px] text-balance mb-8">
+            <h1 className="text-[#292b29] leading-tight m-0 p-0 w-auto text-xl sm:text-2xl md:text-5xl tracking-tight md:tracking-tighter max-w-[500px] text-balance mb-6 sm:mb-8">
               Estimate your monthly mortgage payments
             </h1>
 
-            <div className="bg-white rounded-lg border border-gray-400 px-6 py-8 lg:p-8 my-8 lg:my-14 flex flex-col lg:flex-row lg:justify-between gap-x-8">
+            <div className="bg-white rounded-lg border border-gray-400 px-4 sm:px-6 py-6 sm:py-8 lg:p-8 my-6 sm:my-8 lg:my-14 flex flex-col lg:flex-row lg:justify-between gap-x-8">
               <div className="grid grid-cols-1 lg:grid-cols-5 lg:grid-flow-row-dense gap-4 flex-1">
                 {/* Home Price */}
                 <div className="z-0 relative lg:col-span-3">
@@ -265,32 +265,29 @@ export default function MortgageCalculator() {
               </div>
 
               {/* Monthly Payment Display */}
-              <div className="w-full lg:max-w-[225px] ml-8">
+              <div className="w-full lg:max-w-[225px] mt-6 lg:mt-0 lg:ml-8">
                 <p className="text-[#292b29] font-bold text-base mb-4">
                   Monthly payment
                 </p>
-                <div className="text-2xl font-bold text-[#292b29] mb-6">
+                <div className="text-xl sm:text-2xl font-bold text-[#292b29] mb-6">
                   ${formatCurrency(monthlyPayment)}/mo
                 </div>
-                <button className="bg-[#017848] hover:bg-[#004733] text-white font-bold text-base px-6 py-4 rounded-lg transition-colors w-full lg:min-w-[220px] h-16 flex items-center justify-center">
+                <button className="bg-[#017848] hover:bg-[#004733] text-white font-bold text-sm sm:text-base px-4 sm:px-6 py-3 sm:py-4 rounded-lg transition-colors w-full lg:min-w-[220px] h-12 sm:h-16 flex items-center justify-center">
                   Get pre-approved
                 </button>
               </div>
             </div>
 
             {/* Monthly Payment Breakdown */}
-            <div className="flex flex-col  px-18 lg:gap-x-[250px] md:gap-x-8">
+            <div className="flex flex-col px-2 sm:px-4 lg:px-18 lg:gap-x-[250px] md:gap-x-8">
                 <h4 className="text-[#292b29] text-base md:text-xl mb-4">
                   Monthly payment breakdown
                 </h4>
-              <div className="flex-1 ">
+              <div className="flex-1">
 
                 {/* Colored Progress Bar Chart */}
-                <div className="mt-8  mb-8">
-                  <div className="flex h-12 w-full bg-gray-200 overflow-hidden">
-                    {/* Principal & Interest */}
-                    <div className="mt-8 mb-8"></div>
-                      <div className="flex h-12 w-full bg-gray-200 rounded-full overflow-hidden">
+                <div className="mt-6 sm:mt-8 mb-6 sm:mb-8">
+                  <div className="flex h-8 sm:h-12 w-full bg-gray-200 rounded-full overflow-hidden">
                         {/* Principal & Interest */}
                         <div
                           className="bg-[#292b29] flex items-center justify-center text-white text-xs font-bold h-full rounded-full"
@@ -300,7 +297,7 @@ export default function MortgageCalculator() {
                           }}
                         >
                           {principalPercentage > 15 &&
-                            `${Math.round(principalPercentage)}%`}
+                            <span className="hidden sm:inline">{Math.round(principalPercentage)}%</span>}
                         </div>
 
                         {/* Property Taxes */}
@@ -313,7 +310,7 @@ export default function MortgageCalculator() {
                             }}
                           >
                             {propertyTaxPercentage > 8 &&
-                              `${Math.round(propertyTaxPercentage)}%`}
+                              <span className="hidden sm:inline">{Math.round(propertyTaxPercentage)}%</span>}
                           </div>
                         )}
 
@@ -327,7 +324,7 @@ export default function MortgageCalculator() {
                             }}
                           >
                             {insurancePercentage > 8 &&
-                              `${Math.round(insurancePercentage)}%`}
+                              <span className="hidden sm:inline">{Math.round(insurancePercentage)}%</span>}
                           </div>
                         )}
 
@@ -574,7 +571,6 @@ export default function MortgageCalculator() {
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }

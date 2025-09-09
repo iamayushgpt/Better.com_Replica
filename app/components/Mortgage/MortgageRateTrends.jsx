@@ -1,16 +1,16 @@
 export default function MortgageRateTrends() {
   return (
-    <section className="bg-[#fdfcfb] py-12 px-6">
+    <section className="bg-[#fdfcfb] py-8 sm:py-12 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         {/* Title */}
-        <h2 className="text-4xl font-semibold mb-8">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-6 sm:mb-8">
           Historical mortgage rate trends
         </h2>
 
         {/* Dropdowns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
           <div className="relative">
-            <select className="w-full border rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500">
+            <select className="w-full border rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 text-sm sm:text-base">
               <option>All (average)</option>
               <option>California</option>
               <option>New York</option>
@@ -18,7 +18,7 @@ export default function MortgageRateTrends() {
             </select>
           </div>
           <div className="relative">
-            <select className="w-full border rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500">
+            <select className="w-full border rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 text-sm sm:text-base">
               <option>All (average)</option>
               <option>30-year fixed</option>
               <option>15-year fixed</option>

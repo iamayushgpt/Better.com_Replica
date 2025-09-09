@@ -32,32 +32,32 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="px-44 mx-auto flex py-20 bg-[#FFFDFA]">
-      <h2 className="text-4xl w-[50%] font-semibold mb-6">Mortgage Calculator FAQs</h2>
+    <section className="px-4 sm:px-6 md:px-8 lg:px-16 xl:px-44 mx-auto flex flex-col lg:flex-row py-12 sm:py-16 lg:py-20 bg-[#FFFDFA] gap-6 lg:gap-0">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl w-full lg:w-[50%] font-semibold mb-4 lg:mb-6">Mortgage Calculator FAQs</h2>
 
-      <div className="space-y-4 mt-4 w-[70%]">
+      <div className="space-y-3 sm:space-y-4 mt-0 lg:mt-4 w-full lg:w-[70%]">
         {faqs.map((faq, idx) => (
-          <div key={idx} className="border-b  pb-4">
+          <div key={idx} className="border-b pb-3 sm:pb-4">
             <button
               onClick={() => toggleFAQ(idx)}
-              className="w-full flex justify-between items-center text-left"
+              className="w-full flex justify-between items-start sm:items-center text-left gap-4"
             >
-              <span className="text-2xl font-medium text-gray-800">
+              <span className="text-base sm:text-lg lg:text-2xl font-medium text-gray-800 leading-tight">
                 {faq.question}
               </span>
               {openIndex === idx ? (
-                <ChevronUp className="h-5 w-5 text-gray-600" />
+                <ChevronUp className="h-4 w-4 sm:h-5 sm:w-5 text-gray-600 flex-shrink-0 mt-1 sm:mt-0" />
               ) : (
-                <ChevronDown className="h-5 w-5 text-gray-600" />
+                <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 text-gray-600 flex-shrink-0 mt-1 sm:mt-0" />
               )}
             </button>
 
             <div
               className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                openIndex === idx ? "max-h-96 mt-3" : "max-h-0"
+                openIndex === idx ? "max-h-96 mt-2 sm:mt-3" : "max-h-0"
               }`}
             >
-              <p className="text-gray-600">{faq.answer}</p>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{faq.answer}</p>
             </div>
           </div>
         ))}

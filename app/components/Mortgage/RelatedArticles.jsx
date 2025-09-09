@@ -72,29 +72,29 @@ export default function RelatedArticles() {
   };
 
   return (
-    <div className="bg-[#f6faf7] py-12 px-6 text-center overflow-hidden">
+    <div className="bg-[#f6faf7] py-8 sm:py-12 px-4 sm:px-6 text-center overflow-hidden">
       {/* Heading */}
 
       {/* Controls */}
-      <div className="flex items-center justify-between px-56  gap-4 mb-6">
-        <div className="text-3xl  font-semibold text-gray-900">
+      <div className="flex flex-col sm:flex-row items-center justify-between px-4 sm:px-8 md:px-16 lg:px-32 xl:px-56 gap-4 mb-6">
+        <div className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-900">
           <span>Related articles</span>
         </div>
-        <div className="flex items-center ">
+        <div className="flex items-center">
           <button
             onClick={handlePrev}
             className="p-2 rounded-full flex justify-center items-center hover:bg-gray-200 transition"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
-          <span className="text-sm text-gray-600">
+          <span className="text-xs sm:text-sm text-gray-600 mx-2">
             {page + 1}/{totalPages}
           </span>
           <button
             onClick={handleNext}
             className="p-2 rounded-full hover:bg-gray-200 transition"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
         </div>
       </div>
@@ -108,22 +108,22 @@ export default function RelatedArticles() {
           {Array.from({ length: totalPages }).map((_, i) => (
             <div
               key={i}
-              className="flex flex-none w-full justify-center gap-6 px-2"
+              className="flex flex-none w-full justify-center gap-4 sm:gap-6 px-2 flex-col sm:flex-row"
             >
               {articles.slice(i * 3, i * 3 + 3).map((article, j) => (
                 <div
                   key={j}
-                  className="w-80  border border-gray-300 rounded-xl shadow-sm p-6 text-left"
+                  className="w-full sm:w-80 border border-gray-300 rounded-xl shadow-sm p-4 sm:p-6 text-left mb-4 sm:mb-0"
                 >
-                  <h3 className="text-lg   font-semibold text-gray-600 mb-3">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-600 mb-2 sm:mb-3">
                     {article.title}
                   </h3>
-                  <p className="text-sm text-gray-500 mb-4">
+                  <p className="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4 leading-relaxed">
                     {article.description}
                   </p>
                   <a
                     href={article.link}
-                    className="text-green-700 font-medium flex items-center gap-1 hover:underline"
+                    className="text-green-700 font-medium flex items-center gap-1 hover:underline text-sm sm:text-base"
                   >
                     Read now →
                   </a>
@@ -135,8 +135,8 @@ export default function RelatedArticles() {
       </div>
 
       {/* CTA */}
-      <div className="mt-10">
-        <button className="bg-green-700 hover:bg-green-800 text-white font-semibold px-8 py-4 rounded-md transition-colors">
+      <div className="mt-8 sm:mt-10">
+        <button className="bg-green-700 hover:bg-green-800 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-md transition-colors text-sm sm:text-base">
           Visit our learning center
         </button>
       </div>

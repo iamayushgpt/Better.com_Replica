@@ -43,12 +43,12 @@ export default function FAQAccordion() {
   };
 
   return (
-    <div className="bg-[#f9fafb] min-h-screen py-10 px-44 flex flex-col items-center">
-      <div className="w-full  flex flex-col justify-center items-center">
-        <h1 className="text-2xl md:text-3xl font-semibold text-center mb-4">
+    <div className="bg-[#f9fafb] min-h-screen py-8 sm:py-10 px-4 sm:px-6 md:px-10 lg:px-24 xl:px-44 flex flex-col items-center">
+      <div className="w-full flex flex-col justify-center items-center">
+        <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-center mb-3 sm:mb-4">
           Mortgage Calculator with PMI & Taxes
         </h1>
-        <p className="text-center w-2/3 flex flex-col  text-gray-700 mb-8">
+        <p className="text-center w-full sm:w-4/5 md:w-2/3 flex flex-col text-sm sm:text-base text-gray-700 mb-6 sm:mb-8 space-y-2 sm:space-y-0">
           A mortgage calculator for home loans can show your true monthly
           housing costs before you commit to a home loan.
           <span>
@@ -73,17 +73,17 @@ export default function FAQAccordion() {
           </span>
         </p>
       </div>
-      <div className=" w-full">
+      <div className="w-full">
         <div className="divide-y divide-gray-200 border-t border-b">
           {faqs.map((faq, index) => (
-            <div key={index} className="py-4">
+            <div key={index} className="py-3 sm:py-4">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between py-4 items-center text-left text-2xl font-medium"
+                className="w-full flex justify-between py-3 sm:py-4 items-center text-left text-base sm:text-lg md:text-xl lg:text-2xl font-medium"
               >
-                {faq.question}
+                <span className="pr-4">{faq.question}</span>
                 <ChevronDown
-                  className={`h-5 w-5 transform transition-transform duration-300 ${
+                  className={`h-4 w-4 sm:h-5 sm:w-5 transform transition-transform duration-300 flex-shrink-0 ${
                     openIndex === index ? "rotate-180" : ""
                   }`}
                 />
@@ -93,7 +93,7 @@ export default function FAQAccordion() {
                   openIndex === index ? "max-h-40 mt-2" : "max-h-0"
                 }`}
               >
-                <p className="text-gray-600">{faq.answer}</p>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{faq.answer}</p>
               </div>
             </div>
           ))}
